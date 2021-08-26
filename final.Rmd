@@ -1,0 +1,119 @@
+---
+title: "!!!La Crisis Climática...is now!!!"
+subtitle: "Conociendo los resultados del informe IPCC"
+author: "JFAG"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    seal: FALSE
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+	fig.height = 3.5,
+	fig.retina = 3,
+	fig.width = 9,
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE,
+	hiline = TRUE,
+	include = FALSE,
+	out.width = "100%"
+)
+```
+
+```{r xaringan-themer, warning=FALSE, include=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#F4A261",
+  secondary_color = "#264653",
+  inverse_header_color = "#FFFFFF"
+)
+```
+---
+
+class: center, middle, inverse 
+background-image: url(https://i.ibb.co/ZL6LVw8/Brasil-incendio.jpg
+)
+# "!!!La Crisis Climática...is now!!!"
+## "Conociendo los resultados del informe IPCC"
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Información obtenida de [www.ipcc-ch](https://www.ipcc.ch/report/ar6/wg1/#SPM) 
+---
+class: middle
+
+.title[
+Sobre el .green[informe de la ONU]
+]
+
+<style>
+.title {
+  font-size: 3em;
+  font-style: bold
+}
+
+.green {
+  color: green; 
+}
+</style>
+
+.content[
++ Se trata de un analisis.....
+]
+
+<style>
+.content {
+  font-size: 1em;
+}
+</style>
+---
+
+# titulo prueba
+
+
+Otra información 
+
+--
+
+Información 3
+
+--
+
+---
+
+# Título mas
+---
+
+# Generado buscador
+Solo basta con insertar el chunk
+```{r xaringanExtra-search, echo=TRUE}
+xaringanExtra::use_search(show_icon = TRUE)
+```
+---
+
+# Insertando cógido R (gráficas)
+
+---
+
+.title [
+Aquí esta el error
+]
+
+---
+
+# subir 

@@ -1,0 +1,11 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/802193/da75855102ac4693ad98e925f97b577a
+bundleId: https://api.rpubs.com/api/v1/document/802193/da75855102ac4693ad98e925f97b577a
+url: http://rpubs.com/FerGlez/802193
+when: 1629942336.01501
+lastSyncTime: 1629942336.01501

@@ -1,0 +1,62 @@
+---
+title: "**Introducción a rgee**"
+author: "Aguilera-González, J.F."
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# **Google Earth Engine (GEE)**
+
+**[(GEE)](https://earthengine.google.com/)** es una plataforma gratuita de computación en la nube, diseñada para el análisis de datos espaciales a una escala planetaria.
+
+Para acceder a los beneficios de la plataforma, es requisito indispensable **crear una cuenta** con *tucorreo@gmail.com* en la página **<https://earthengine.google.com/>**. Las credenciales necesarias para acceder a la plataforma llegarán a tu bandeja de entrada en **aproximadamente** 1 a 3 días.  
+
+```{r echo=FALSE}
+# librerías-ecosistema-R-spatial
+pacman::p_load(tidyverse, sf, rgee, rgeeExtra, mapedit, raster, tmap, cptcity)
+```
+
+# **¿Qué es `rgee`?**
+
+Es una paquetería desarrollada por **[Aybar et al. (2020)](https://github.com/csaybar/rgee)** *[(personal website)](https://csaybar.github.io/)* que actúa como puente (vinculante) para comunicarnos con **GEE**. A la fecha, no es considerada una **interfaz de programación de aplicaciones (API) oficial** de **GEE** pero, permite integrar la **API** de **`Python`** por medio del paquete **`reticulate`**, facilitando el análisis espacial de datos para trabajar con todo el ecosistema de **[r-spatial](https://github.com/r-spatial)**
+
+## **Instalando `rgee`**
+
+Para trabajar con **`rgee`** es necesario utilizar una versión de **`R`superior a 3.6**.  
+
+La forma clásica de instalar **`rgee`** es con las paqueterías **`remotes`** y **`rstudioapi`**. Por lo tanto, será necesario instalarlas previamente:
+
+```{r echo=TRUE, eval=FALSE, class.source="bg-success"}
+install.packages("remotes")
+install.packages("rstudioapi")
+remotes::install_github("r-spatial/rgee")
+```
+
+Si están instaladas las versiones de **`R`** de **32 bits** y de **64 bits**, **`remotes`** intenta compilar ambas. Durante el proceso de compilación, comprueba si el paquete se puede cargar en las versiones **`R`** de **32 y 64 bits**. Cuando intentas ejecutar la versión de **32 bits**, el paquete **`reticulate`**, provocará un error **si** la versión de **`Python`** a la que tiene acceso es de **64 bits**, por lo que el proceso de instalación fallará.
+
+En lugar de tener que actualizar **`R`**, puedes **AGREGAR** al llamado: 
+
+* **INSTALL_opts=c("--no-multiarch"))** como se observa a continuación: 
+
+```{r echo=TRUE, eval=FALSE, attr.source = 'style="background: pink;"'}
+remotes::install_github("r-earthengine/rgee", INSTALL_opts=c("--no-multiarch"))
+```
+
+### Inicializar **`rgee`**
+
+```{r echo=TRUE, eval=FALSE}
+# Inicializar GEE
+ee_Initialize(email = "mvzferglez", drive = TRUE)
+```
+
+
